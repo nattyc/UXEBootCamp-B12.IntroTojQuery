@@ -1,14 +1,7 @@
-$("h3").css("color","tomato");
 
-$(".copyright").replaceWith('<p class="copyright">©2014 Badass</p>');
-
-$("nav a").on('click',
+$("a").on('click',
   function(){
     alert("sweet");
-  });
-
-$("figure").click(function(){
-  $("img").toggle(10000,"swing");
   });
 
 $( "p, ul, h1" ).click(function() {
@@ -25,21 +18,28 @@ $( ".banner" ).hover(
   }
   );
 
-$("button").click(
-  function() {
-  var dis = $(this);
-  var otherWords =dis.data('phrase');
-  //is there a way to do this without data? look into this
-  var finalOutput = otherWords + ' :O';
-  if (dis.text() === finalOutput) {
-    dis.text(dis.data('text'));
-  }
-  else {
-    dis.data('text', dis.text());
-    dis.text(finalOutput);
-  }
-  $("body").toggleClass("highlight")
-  });
+$( "body" ).keypress(function() {
+  $(this).toggleClass("keydown");
+  $( ".extra" ).toggleClass("extra2");
+
+});
+
+$('#expand-blue').on('click', function() {
+  $(this).toggleClass('close-blue');
+  $('.text').toggleClass('open-blue')
+  .end();
+});
+
+
+var w = Math.round($(document).width() / 255);
+var h = Math.round($(document).height() / 255);
+var body = $("body");
+
+$(document).mousemove(function(e){
+    var pageX = Math.round(e.pageX / w);
+    var pageY = Math.round(e.pageY / h);
+    body.css("background-color", "rgb("+pageX+","+pageY+","+pageX+")");
+});
 
 
 

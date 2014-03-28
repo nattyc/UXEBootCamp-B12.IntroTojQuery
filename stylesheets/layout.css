@@ -16,97 +16,83 @@
 
 /* #Page Styles
 ================================================== */
-
-
-
-header h1 {
-	display: inline;
-	font-family: 'Lemon', cursive;
-	line-height: 1.5em;
-	float: left;
+html, body{
+	height: 100%;
 }
 
-
-nav {
-	font-size: 2em;
-	height: 3em;
-	float: right;
+body{
+	background-image:
+		url('../images/geo.png');
+		/*linear-gradient(to bottom right, #FB8AFF -10%, #EFD916 150%);*/
+	background-color: #D28B11;
+	background-size: 200%;
+	background-position: 25% 75%, center;
+	transition: background-size .5s, background-color .7s, background-position .5s;
 }
 
-nav a {
+.extra{
+	background-image: url("../images/texture.png");
+	background-size: 150%;
+	background-position: 25% 75%;
+	width: 100%;
+	height: 100%;
+	transition: background-position .4s, background-size .5s;
+}
+
+.extra2{
+	background-image: url("../images/texture.png");
+	background-size: 110%;
+	background-position: 35% 25%;
+	/*transform: rotate(40deg);*/
+}
+
+.keydown{
+	background-image:
+		url('../images/geo.png');
+	background-color: #FB8AFF;
+		/*linear-gradient(to bottom right, #D28B11 0%, #EA2381 100%);*/
+	background-size: 110%;
+	background-position: 47% 33%, center;
+}
+
+a {
 	text-decoration: none;
-	float: right;
 	width: 2em;
-	margin-top: 0.8em;
-}
-
-figure {
-  width: 100%;
-  margin: 2em auto;
-  height: 50%;
-}
-
-figure img{
+	margin: 18% auto;
+	font-size: 18em;
 	display: block;
-	margin: 0 auto;
+	opacity: 20%;
+	color: tomato;
+	text-align: center;
 }
 
-
-.banner{
-	background: url('../images/bg2.svg'), url('../images/bg1.jpg');
-	background-position: center, center bottom;
-	width: 960px;
-	height: 500px;
-	background-repeat: no-repeat;
-	margin-bottom: 2em;
+.text{
+	margin-top: -5em;
 }
 
-button{
+h3{
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: 800;
+	color: #fff;
+}
+
+p{
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: 400;
+	color: #fff;
+}
+
+.actioncall{
+	margin-top: 2em;
 	font-size: 3em;
-	font-weight: 100;
-	text-decoration: none;
-	color: #FFF;
-	background: none repeat scroll 0 0 #74A1B5;
-	border-radius: 0;
-	border: none;
-	text-shadow:none;
+	border-width:thick;
+	border-color: tomato;
+	border-radius: 5%;
+	line-height: 1.25em;
 }
 
-button:hover{;
-	text-decoration: none;
-	color: #FFF;
-	background: none repeat scroll 0 0 #508CA6;
-	border-radius: 0;
-	border: none;
-}
-
-footer{
-	height:100px;
-	background-color: lightgrey;
-	margin-top: 40px;
-}
-
-.copyright{
-	float: right;
-	display: inline;
-	margin-right: 20px;
-	margin-top: 40px;
-	color: #fff
-}
-
-.sprite1{
-	width: 22px;
-	height: 22px;
-	background:url('../images/sprites.png') -6px -11px;
-	margin:40px 0 40px 20px;
-}
-
-.sprite2{
-	width: 22px;
-	height: 22px;
-	background:url('../images/sprites.png') -37px -11px;
-	margin:40px 0 40px 10px;
-}
 /* #Media Queries
 ================================================== */
 
@@ -118,79 +104,23 @@ footer{
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
-		header h1{
-			line-height: 1em;
-			text-align: center;
-			margin-left: calc(50% - 212.5px);
-			margin-top: .2em;
+	a{
+			margin:12% auto;
 		}
-		header {
-			text-align: center;
-		}
-		nav{
-			margin: 1.5em auto;
-			height: 30px;
-
-		}
-
-		nav a {
-			float: none;
-			margin:0.25em;
-    }
 
 	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		header h1{
-			line-height: 1em;
-			display: block;
-			text-align: center;
-		}
-
-		header{
-			position: relative;
-		}
-
-		nav{
-			margin-left: -20px;
-		}
-
-		figure img{
-			margin-bottom: 1em;
-			margin-top: 2em;
-		}
-
-		nav a{
-		text-align: center;
-		padding: 13px;
-		margin-bottom: 20px;
+		a{
+			margin:5em auto;
 		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		figure img{
-		width: 200px;
-		height: 200px;
-		margin-bottom: 2em;
-		}
-
-		header h1{
-			text-align: center;
-			font-size: 2.5em;
-			line-height: 1.2em;
-			margin-bottom: -.2em;
-			margin-top: .2em
-		}
-
-		nav{
-			display: inline-block;
-		}
-
-		.banner{
-			height: 300px;
-			margin-bottom: 2em;
+		a{
+			margin:5em auto;
 		}
 
 
@@ -201,6 +131,7 @@ footer{
 
 .highlight{
 	background-color: lime;
+	opacity: .7;
 }
 
 

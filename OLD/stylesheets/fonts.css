@@ -23,10 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-podcast:before {
+  content: "\e600";
+}
+.icon-equalizer:before {
+  content: "\e601";
+}
 .icon-rocket:before {
   content: "\e602";
-  color: white;
-  opacity: .8;
 }
-
+.icon-earth:before {
+  content: "\e603";
+}
+.icon-tongue:before {
+  content: "\e604";
+}
